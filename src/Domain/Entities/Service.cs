@@ -21,9 +21,9 @@ public class Service
 
     public District? District { get; set; }
 
-    public int OwnerId { get; set; }
+    public int AppUserId { get; set; }
 
-    public User Owner { get; set; }
+    public required AppUser AppUser { get; set; }
 
     public ICollection<Appointment>? Appointments { get; set; }
 

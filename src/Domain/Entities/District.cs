@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AppointMateApi.Domain.Entities;
-public class District
+public class District : BaseAuditableEntity
 {
     public required string Name { get; set; }
 

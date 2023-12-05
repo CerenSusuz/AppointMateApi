@@ -19,5 +19,5 @@ public class ServiceReview
 
     public int UserId { get; set; }
 
-    public User User { get; set; }
+    public required AppUser AppUser { get; set; }
 }

@@ -14,9 +14,9 @@ public class AppointmentHistory : BaseAuditableEntity
 
     public DateTime ModifiedDate { get; set; }
 
-    public int ModifiedByUserId { get; set; }
+    public int ModifiedByAppUserId { get; set; }
 
-    public User ModifiedBy { get; set; }
+    public required AppUser ModifiedByAppUser { get; set; }
 
     public int AppointmentId { get; set; }
 

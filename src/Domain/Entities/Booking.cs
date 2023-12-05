@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace AppointMateApi.Domain.Entities;
 public class Booking : BaseAuditableEntity
 {
-    public Booking()
-    {
-        IsConfirmed = false;
-        IsCancelled = false;
-    }
+    //public Booking()
+    //{
+    //    IsConfirmed = false;
+    //    IsCancelled = false;
+    //}
 
     public DateTime StartDateTime { get; set; }
 
@@ -21,13 +21,13 @@ public class Booking : BaseAuditableEntity
 
     public bool? IsCancelled { get; set; }
 
-    public string Note { get; set; }
+    public string? Note { get; set; }
 
     public int ServiceId { get; set; }
 
-    public Service Service { get; set; }
+    public required Service Service { get; set; }
 
-    public int UserId { get; set; }
+    public int AppUserId { get; set; }
 
-    public User User { get; set; }
+    public required AppUser AppUser { get; set; }
 }

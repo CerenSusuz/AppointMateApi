@@ -24,11 +24,11 @@ public class Appointment : BaseAuditableEntity
 
     public int UserId { get; set; }
 
-    public User User { get; set; }
+    public required AppUser AppUser { get; set; }
 
     public int ServiceId { get; set; }
 
-    public Service Service { get; set; }
+    public required Service Service { get; set; }
 
     public int? AppointmentHistoryId { get; set; }
 

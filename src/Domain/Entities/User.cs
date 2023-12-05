@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AppointMateApi.Domain.Entities;
-public class User
+public class AppUser: BaseAuditableEntity
 {
     public required string FirstName { get; set; }
 
