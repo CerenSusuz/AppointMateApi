@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using AppointMateApi.Domain.Entities;
@@ -8,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AppointMateApi.Infrastructure.Data.Configurations;
-public class ServiceConfiguration : IEntityTypeConfiguration<Service>
+public class AppServiceConfiguration : IEntityTypeConfiguration<AppService>
 {
-    public void Configure(EntityTypeBuilder<Service> builder)
+    public void Configure(EntityTypeBuilder<AppService> builder)
     {
-        builder.ToTable("Services");
+        builder.ToTable("AppServices");
 
         builder.HasOne(service => service.City)
             .WithMany(city => city.Services)
@@ -24,9 +25,9 @@ public class ServiceConfiguration : IEntityTypeConfiguration<Service>
             .HasForeignKey(service => service.DistrictId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasOne(service => service.Owner)
+        builder.HasOne(service => service.AppUser)
             .WithMany(user => user.Services)
-            .HasForeignKey(service => service.OwnerId)
+            .HasForeignKey(service => service.AppUserId)
             .OnDelete(DeleteBehavior.Restrict);
     }
 }

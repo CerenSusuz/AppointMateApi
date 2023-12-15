@@ -1,6 +1,5 @@
 ﻿using AppointMateApi.Application.TodoLists.Queries.GetTodos;
 using AppointMateApi.Domain.Entities;
-using AppointMateApi.Domain.ValueObjects;
 
 namespace AppointMateApi.Application.FunctionalTests.TodoLists.Queries;
 
@@ -28,7 +27,6 @@ public class GetTodosTests : BaseTestFixture
         await AddAsync(new TodoList
         {
             Title = "Shopping",
-            Colour = Colour.Blue,
             Items =
                     {
                         new TodoItem { Title = "Apples", Done = true },

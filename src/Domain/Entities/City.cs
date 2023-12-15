@@ -13,5 +13,5 @@ public class City : BaseAuditableEntity
 
     public ICollection<District>? Districts { get; set; }
 
-    public ICollection<Service>? Services { get; set; }
+    public ICollection<AppService>? Services { get; set; }
 }

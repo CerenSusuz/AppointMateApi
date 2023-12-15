@@ -29,14 +29,14 @@ public class BookingConfiguration : IEntityTypeConfiguration<Booking>
         builder.Property(booking => booking.Note)
             .HasMaxLength(500);
 
-        builder.HasOne(booking => booking.User)
+        builder.HasOne(booking => booking.AppUser)
             .WithMany(user => user.Bookings)
-            .HasForeignKey(booking => booking.UserId)
+            .HasForeignKey(booking => booking.AppUserId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasOne(booking => booking.Service)
+        builder.HasOne(booking => booking.AppService)
             .WithMany(service => service.Bookings)
-            .HasForeignKey(booking => booking.ServiceId)
+            .HasForeignKey(booking => booking.AppServiceId)
             .OnDelete(DeleteBehavior.Restrict);
     }
 }

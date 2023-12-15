@@ -21,14 +21,14 @@ public class AppointmentConfiguration : IEntityTypeConfiguration<Appointment>
         builder.Property(appointment => appointment.EndTime).IsRequired();
         builder.Property(appointment => appointment.Location).HasMaxLength(100);
 
-        builder.HasOne(appointment => appointment.User)
+        builder.HasOne(appointment => appointment.AppUser)
                .WithMany(user => user.Appointments)
-               .HasForeignKey(appointment => appointment.UserId)
+               .HasForeignKey(appointment => appointment.AppUserId)
                .OnDelete(DeleteBehavior.Cascade);
 
-        builder.HasOne(appointment => appointment.Service)
+        builder.HasOne(appointment => appointment.AppService)
                .WithMany(service => service.Appointments)
-               .HasForeignKey(appointment => appointment.ServiceId)
+               .HasForeignKey(appointment => appointment.AppServiceId)
                .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne(appointment => appointment.AppointmentHistory)

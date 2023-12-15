@@ -18,14 +18,14 @@ public class ServiceReviewConfiguration : IEntityTypeConfiguration<ServiceReview
         builder.Property(review => review.Comment).IsRequired().HasMaxLength(250);
         builder.Property(review => review.Rating).IsRequired();
 
-        builder.HasOne(review => review.Service)
+        builder.HasOne(review => review.AppService)
             .WithMany(service => service.Reviews)
-            .HasForeignKey(review => review.ServiceId)
+            .HasForeignKey(review => review.AppServiceId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne(review => review.AppUser)
             .WithMany(user => user.Reviews)
-            .HasForeignKey(review => review.UserId)
+            .HasForeignKey(review => review.AppUserId)
             .OnDelete(DeleteBehavior.Restrict);
     }
 }

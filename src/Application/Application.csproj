@@ -9,11 +9,19 @@
     <PackageReference Include="Ardalis.GuardClauses" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="Mapster" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\AppointmentManagement\Commands\Delete\" />
+    <Folder Include="Features\AppointmentManagement\Commands\Update\" />
+    <Folder Include="Features\AppointmentManagement\Queries\GetAll\" />
+    <Folder Include="Features\AppointmentManagement\Queries\GetById\" />
   </ItemGroup>
 
 </Project>

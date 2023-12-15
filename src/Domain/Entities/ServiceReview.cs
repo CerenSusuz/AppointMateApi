@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AppointMateApi.Domain.Entities;
-public class ServiceReview
+public class ServiceReview : BaseAuditableEntity
 {
     public required string Title { get; set; }
 
@@ -13,11 +13,11 @@ public class ServiceReview
 
     public int Rating { get; set; }
 
-    public int ServiceId { get; set; }
+    public int AppServiceId { get; set; }
 
-    public required Service Service { get; set; }
+    public required AppService AppService { get; set; }
 
-    public int UserId { get; set; }
+    public int AppUserId { get; set; }
 
     public required AppUser AppUser { get; set; }
 }

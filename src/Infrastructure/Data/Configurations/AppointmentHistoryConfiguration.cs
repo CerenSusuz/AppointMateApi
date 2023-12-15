@@ -18,9 +18,9 @@ public class AppointmentHistoryConfiguration : IEntityTypeConfiguration<Appointm
         builder.Property(history => history.Note).HasMaxLength(500);
         builder.Property(history => history.ModifiedDate).IsRequired();
 
-        builder.HasOne(history => history.ModifiedBy)
+        builder.HasOne(history => history.ModifiedByAppUser)
                .WithMany()
-               .HasForeignKey(history => history.ModifiedByUserId)
+               .HasForeignKey(history => history.ModifiedByAppUserId)
                .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne(history => history.Appointment)

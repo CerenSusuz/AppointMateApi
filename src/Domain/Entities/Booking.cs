@@ -23,9 +23,9 @@ public class Booking : BaseAuditableEntity
 
     public string? Note { get; set; }
 
-    public int ServiceId { get; set; }
+    public int AppServiceId { get; set; }
 
-    public required Service Service { get; set; }
+    public required AppService AppService { get; set; }
 
     public int AppUserId { get; set; }
 
