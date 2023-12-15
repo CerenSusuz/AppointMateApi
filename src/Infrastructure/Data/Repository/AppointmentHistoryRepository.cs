@@ -7,7 +7,7 @@ using AppointMateApi.Application.Common.Interfaces;
 using AppointMateApi.Domain.Entities;
 
 namespace AppointMateApi.Infrastructure.Data.Repository;
-public class AppointmentRepository(ApplicationDbContext dbContext) : 
-    BaseRepository<Appointment, ApplicationDbContext>(dbContext), IAppointmentRepository
+public class AppointmentHistoryRepository(ApplicationDbContext dbContext) :
+    BaseRepository<AppointmentHistory, ApplicationDbContext>(dbContext), IAppointmentHistoryRepository
 {
 }

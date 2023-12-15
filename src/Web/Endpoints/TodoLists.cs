@@ -1,7 +1,7 @@
 ﻿using AppointMateApi.Application.Features.TodoLists.Commands.CreateTodoList;
+using AppointMateApi.Application.Features.TodoLists.Commands.DeleteTodoList;
 using AppointMateApi.Application.Features.TodoLists.Commands.UpdateTodoList;
 using AppointMateApi.Application.Features.TodoLists.Queries.GetTodos;
-using AppointMateApi.Application.TodoLists.Commands.DeleteTodoList;
 
 namespace AppointMateApi.Web.Endpoints;
 

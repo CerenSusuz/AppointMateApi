@@ -1,9 +1,9 @@
 ﻿using AppointMateApi.Application.Common.Models;
 using AppointMateApi.Application.Features.TodoItems.Commands.CreateTodoItem;
+using AppointMateApi.Application.Features.TodoItems.Commands.DeleteTodoItem;
 using AppointMateApi.Application.Features.TodoItems.Commands.UpdateTodoItem;
 using AppointMateApi.Application.Features.TodoItems.Commands.UpdateTodoItemDetail;
 using AppointMateApi.Application.Features.TodoItems.Queries.GetTodoItemsWithPagination;
-using AppointMateApi.Application.TodoItems.Commands.DeleteTodoItem;
 
 namespace AppointMateApi.Web.Endpoints;
 
