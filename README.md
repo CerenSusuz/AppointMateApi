@@ -2,6 +2,23 @@
 
 The project was generated using the [Clean.Architecture.Solution.Template](https://github.com/jasontaylordev/AppointMateApi) version 8.0.0.
 
+## Getting Started
+
+This section includes the steps required to run and develop your project on your local machine.
+
+### Prerequisites
+
+- [.NET SDK](https://dotnet.microsoft.com/download)
+
+### Installation
+
+1. Clone the project to your local machine.
+   
+```bash
+git clone https://github.com/yourusername/AppointMateApi.git
+cd AppointMateApi
+```
+
 ## Build
 
 Run `dotnet build -tl` to build the solution.
@@ -16,6 +33,19 @@ dotnet watch run
 ```
 
 Navigate to https://localhost:5001. The application will automatically reload if you change any of the source files.
+
+Project Layers
+1. Domain
+The domain layer contains core entities and value objects.
+
+2. Application
+The application layer houses business logic, application services, and command/query handlers.
+
+3. Infrastructure
+The infrastructure layer includes database connections, identity management, and other external service integrations.
+
+4. Web
+The web layer provides API endpoints and user interfaces.
 
 ## Code Styles & Formatting
 
