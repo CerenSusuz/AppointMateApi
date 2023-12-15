@@ -14,6 +14,14 @@ public class LookupDto
         {
             CreateMap<TodoList, LookupDto>();
             CreateMap<TodoItem, LookupDto>();
+            CreateMap<Appointment, LookupDto>();
+            CreateMap<AppointmentHistory, LookupDto>();
+            CreateMap<AppService, LookupDto>();
+            CreateMap<AppUser, LookupDto>();
+            CreateMap<Booking, LookupDto>();
+            CreateMap<City, LookupDto>();
+            CreateMap<District, LookupDto>();
+            CreateMap<ServiceReview, LookupDto>();
         }
     }
 }
