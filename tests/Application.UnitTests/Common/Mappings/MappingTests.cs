@@ -3,10 +3,10 @@ using System.Runtime.Serialization;
 using AutoMapper;
 using AppointMateApi.Application.Common.Interfaces;
 using AppointMateApi.Application.Common.Models;
-using AppointMateApi.Application.TodoItems.Queries.GetTodoItemsWithPagination;
-using AppointMateApi.Application.TodoLists.Queries.GetTodos;
 using AppointMateApi.Domain.Entities;
 using NUnit.Framework;
+using AppointMateApi.Application.Features.TodoItems.Queries.GetTodoItemsWithPagination;
+using AppointMateApi.Application.Features.TodoLists.Queries.GetTodos;
 
 namespace AppointMateApi.Application.UnitTests.Common.Mappings;
 

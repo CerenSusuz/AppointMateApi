@@ -1,6 +1,6 @@
 ﻿using AppointMateApi.Application.Common.Behaviours;
 using AppointMateApi.Application.Common.Interfaces;
-using AppointMateApi.Application.TodoItems.Commands.CreateTodoItem;
+using AppointMateApi.Application.Features.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
